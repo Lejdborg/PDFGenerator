@@ -297,11 +297,12 @@ private extension PDFGenerator {
         }
         switch page {
         case .WhitePage(let size):
-            try autoreleasepool {
+            print("Warning – Unimplemented: Create white page with size \(size)")
+            /*try autoreleasepool {
                 let view = UIView(frame: CGRect(origin: .zero, size: size))
                 view.backgroundColor = .whiteColor()
                 try view.renderPDFPage()
-            }
+            }*/
         case .View(let view):
             try view.renderPDFPage()
         case .Image(let image):
